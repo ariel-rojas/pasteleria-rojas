@@ -1,6 +1,8 @@
 import ItemList from "./ItemList";
 import Item from "./Item"
 
+console.log(ItemList)
+
 const ItemListContainer = () => {
     return ( 
     <section className="w-full h-screen bg-zinc-200 drop-shadow-lg pt-[100px] ">
