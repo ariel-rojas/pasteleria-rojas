@@ -7,11 +7,11 @@ const NavBar = () => {
     const handleClick = () => setNav(!nav)
 
     return ( 
-        <div className='w-screen h-[100px] z-10 bg-zinc-200 fixed drop-shadow-lg'>
+        <div className='w-screen h-100 z-10 bg-zinc-200 fixed drop-shadow-lg'>
             {/* creo un container */}
             <div className='flex flex-col justify-between items-center w-full h-full'>
                 <div className='flex  justify-end items-center w-full'>
-                    <h1 className='text-3xl font-bold mr-2 sm:text-4xl fixed inset-x-1/2'>MARCA</h1>
+                    <h1 className='text-3xl font-bold sm:text-4xl fixed inset-x-1/2'>MARCA</h1>
                     <ul className='flex items-center'>
                         <li className='hidden md:flex pr-4'><SearchIcon className='w-5'/></li>
                         <li className='hidden md:flex pr-4'><UserIcon className='w-5'/></li>
@@ -43,7 +43,6 @@ const NavBar = () => {
                     </button>   
                 </div>    
             </ul>
-
         </div>
      );
 }
