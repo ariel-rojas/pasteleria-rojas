@@ -7,11 +7,11 @@ const Card = () => {
                 <section className="w-full h-screen bg-zinc-200 mt-100 drop-shadow-lg">
             <div className = "w-full h-screen flex flex-row justify-around items-center mt-20">
                 <div className = "flex flex-col w-[250px] h-[500px]">
-                    <img className = "w-100"src={capuccinoImg} alt="Sunset in the mountains"></img>
+                    <img className = "w-100" src={capuccinoImg} alt="Sunset in the mountains"></img>
                     <div className="w-full">
                         <h3>Café</h3>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum mollitia corporis non ex distinctio, voluptate voluptas odio iste ratione eveniet.</p>
-                        <ItemCount/>
+                        <ItemCount stock = {10} initial = {0} onAdd ={() => console.log("se agregó al carrito")} />
                     </div>
                 </div>
             </div>
