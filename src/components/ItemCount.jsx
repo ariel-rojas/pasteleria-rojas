@@ -4,7 +4,7 @@ const ItemCount = (props) => {
     const stock = props.stock
     const initial = props.initial
     const onAdd = props.onAdd
-    const [count,setCount] = useState(0)
+    const [count,setCount] = useState({initial})
     const registrarClick= (operacion)=>{
         if(operacion ==="-" && count>0){
             setCount(count-1)

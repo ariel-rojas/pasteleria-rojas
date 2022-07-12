@@ -38,9 +38,6 @@ const NavBar = () => {
                 <li className='border-b-2 border-zinc-300 w-full'>Pedidos</li>
                 <li className='border-b-2 border-zinc-300 w-full'>Sobre Nosotros</li>         
                 <div className='flex flex-col'>
-                    <button>
-                        Sign up
-                    </button>   
                 </div>    
             </ul>
         </div>
