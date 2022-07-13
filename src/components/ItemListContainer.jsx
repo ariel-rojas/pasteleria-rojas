@@ -6,7 +6,7 @@ console.log(ItemList)
 const ItemListContainer = () => {
     return ( 
     <section className="w-full h-screen bg-zinc-200 drop-shadow-lg pt-[100px] ">
-        <div className = "w-full h-screen flex flex-row justify-around items-center">
+        <div className = "w-full h-screen flex flex-row flex-wrap justify-around items-center">
             {ItemList.map((item) => {
                 return <Item name={item.name} imgUrl={item.imgUrl} price={item.price} description={item.description}/>
             })}
