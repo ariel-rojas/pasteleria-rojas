@@ -7,9 +7,9 @@ const ItemListContainer = () => {
     const [Items, setItems] = useState([])
     
     const promise = new Promise((resolve, reject) => {
-        setTimeout(resolve(ItemList),8000);
+        setTimeout(resolve(ItemList),2000);
         console.log(Items)
-        setTimeout(()=> reject("Error: no se han cargado los productos",8000))
+        setTimeout(()=> reject("Error: no se han cargado los productos",2000))
     })
     useEffect(()=>{
         promise.then((res) => setItems(ItemList))
