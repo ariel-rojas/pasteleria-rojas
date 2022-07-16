@@ -1,13 +1,15 @@
 import ItemList from "./ItemList";
 import Item from "./Item"
-import { useEffect, setState } from "react";
+import { useEffect, useState } from "react";
 
 
 const ItemListContainer = () => {
-    const [Items, setItems] = setState([])
+    const [Items, setItems] = useState([])
+    
     const promise = new Promise((resolve, reject) => {
-        setTimeout(resolve(ItemList),2000);
-        setTimeout(()=> reject("Error: no se han cargado los productos",2000))
+        setTimeout(resolve(ItemList),8000);
+        console.log(Items)
+        setTimeout(()=> reject("Error: no se han cargado los productos",8000))
     })
     useEffect(()=>{
         promise.then((res) => setItems(ItemList))
