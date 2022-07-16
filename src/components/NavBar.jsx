@@ -7,15 +7,18 @@ const NavBar = () => {
     const handleClick = () => setNav(!nav)
 
     return ( 
-        <div className='w-screen h-100 z-10 bg-zinc-200 fixed drop-shadow-lg'>
+        <div className='w-screen h-100 z-10 bg-slate-800 md:bg-zinc-200 fixed drop-shadow-lg'>
             {/* creo un container */}
-            <div className='flex flex-col justify-between items-center w-full h-full'>
-                <div className='flex  justify-end items-center w-full'>
-                    <h1 className='text-3xl font-bold sm:text-4xl fixed inset-x-1/2'>MARCA</h1>
-                    <ul className='flex items-center'>
-                        <li className='hidden md:flex pr-4'><SearchIcon className='w-5'/></li>
-                        <li className='hidden md:flex pr-4'><UserIcon className='w-5'/></li>
-                        <li className='hidden md:flex pr-4'><CartWidget/></li>
+            <div className='flex  justify-between items-center w-full h-full flex-col'>
+                <div className='flex  justify-between items-center w-full'>
+                    <div className='md:hidden flex justify-center text-zinc-200' onClick={handleClick}>
+                        {!nav ? <MenuIcon className='w-8'/>:<XIcon className='w-8'/>}
+                    </div>
+                    <h1 className='flex justify center text-3xl text-zinc-200 md:text-slate-800 font-bold sm:text-4xl'>MARCA</h1>
+                    <ul className='flex items-center text-zinc-200 md:text-slate-800'>
+                        <li className=' flex pr-4'><SearchIcon className='w-8'/></li>
+                        <li className=' flex pr-4'><UserIcon className='w-8'/></li>
+                        <li className=' flex pr-4'><CartWidget/></li>
                     </ul>
                 </div>
                 <div className='flex  flex-col items-center w-full bg-slate-800 text-zinc-200'>
@@ -27,9 +30,7 @@ const NavBar = () => {
                         <li>Sobre Nosotros</li>
                     </ul>
                 </div>
-                <div className='md:hidden ' onClick={handleClick}>
-                    {!nav ? <MenuIcon className='w-5'/>:<XIcon className='w-5'/>}
-                </div>
+
             </div> 
             <ul className={!nav? 'hidden':'absolute bg-zinc-200 w-full px-8'}>
                 <li className='border-b-2 border-zinc-300 w-full'>Inicio</li>
