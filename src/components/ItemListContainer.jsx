@@ -1,4 +1,4 @@
-import products from "./products";
+import discos from "./discos";
 import ItemList from "./ItemList"
 import { useEffect, useState } from "react";
 import {useParams} from "react-router-dom"
@@ -9,11 +9,11 @@ const ItemListContainer = () => {
 
     useEffect(() => {
         const loadData = new Promise((resolve, reject) => {
-            setTimeout(()=>resolve(products),2000)
+            setTimeout(()=>resolve(discos),2000)
         })
         loadData.then((items) => {
             if(name){
-                setItems(items.filter((product) => product.category == name))
+                setItems(items.filter((album) => album.category == name))
             }else{
                 setItems(items)
             }

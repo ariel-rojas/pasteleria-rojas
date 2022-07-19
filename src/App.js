@@ -14,7 +14,6 @@ function App() {
         <Route path='/category/:name' element={<ItemListContainer/>}/>
         <Route path='*' element={<div>ERROR</div>}/>
       </Routes>
-
       </BrowserRouter>
     </>
 
