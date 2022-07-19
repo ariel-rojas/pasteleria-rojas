@@ -12,16 +12,13 @@ const ItemListContainer = () => {
             setTimeout(()=>resolve(products),2000)
         })
         loadData.then((items) => {
-            setItems(items);
-            // const products = res
-            // if(name){
-            //     setItems(products.filter((product) => product.category == name))
-            //     console.log(Items)
-            // }else{
-            //     setItems(products)
-            // }
+            if(name){
+                setItems(items.filter((product) => product.category == name))
+            }else{
+                setItems(items)
+            }
         })
-    },[])  //[name]
+    },[name]) 
     return ( 
     <section className="w-full h-screen bg-zinc-200 drop-shadow-lg pt-[100px] ">
         <ItemList items = {Items}/>
