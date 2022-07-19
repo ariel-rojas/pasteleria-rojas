@@ -1,6 +1,7 @@
 import{MenuIcon,XIcon, SearchIcon, UserIcon} from '@heroicons/react/outline';
 import CartWidget from './CartWidget';  
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
     const [nav,setNav] = useState(false)
@@ -14,7 +15,7 @@ const NavBar = () => {
                     <div className='md:hidden flex justify-center text-zinc-200' onClick={handleClick}>
                         {!nav ? <MenuIcon className='w-8'/>:<XIcon className='w-8'/>}
                     </div>
-                    <h1 className='flex justify center text-3xl text-zinc-200 md:text-slate-800 font-bold sm:text-4xl'>MARCA</h1>
+                    <Link className='flex justify center text-3xl text-zinc-200 md:text-slate-800 font-bold sm:text-4xl' to={"/"}>MARCA</Link>
                     <ul className='flex items-center text-zinc-200 md:text-slate-800'>
                         <li className=' flex pr-4'><SearchIcon className='w-8'/></li>
                         <li className=' flex pr-4'><UserIcon className='w-8'/></li>
