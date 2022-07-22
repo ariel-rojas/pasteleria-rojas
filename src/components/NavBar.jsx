@@ -25,9 +25,9 @@ const NavBar = () => {
                 <div className='flex  flex-col items-center w-full bg-slate-800 text-zinc-200'>
                     <ul className='hidden md:flex w-full justify-center'>
                         <li><a href="#">Inicio</a> </li>
-                        <li><a href="">Productos</a> </li>
-                        <li><a href="">Reservas</a></li>
-                        <li><a href="">Pedidos</a></li>
+                        <li><a href="">Artistas</a> </li>
+                        <li><a href="">Generos</a></li>
+                        <li><a href="">Decadas</a></li>
                         <li><a href="">Sobre Nosotros</a></li>
                     </ul>
                 </div>

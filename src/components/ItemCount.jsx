@@ -15,11 +15,10 @@ const ItemCount = (props) => {
     }
     return ( 
         <>
-
-        {/* <button onClick={() => registrarClick("-")}>-</button>
+        <button onClick={() => registrarClick("-")}>-</button>
         {count}
-        <button onClick={() => registrarClick("+")}>+</button> */}
-        <button onClick = {() => onAdd()}>Ver detalles</button>
+        <button onClick={() => registrarClick("+")}>+</button>
+        <button onClick = {() => onAdd()}>Agregar al carrito</button>
         </>
 
      );

@@ -4,7 +4,7 @@ const ItemList = ({items}) => {
     return ( 
         <div className = "w-screen flex flex-row flex-wrap justify-start items-center bg-zinc-200">
         {items.map((item) => {
-            return <Item name={item.name} imgURL={item.imgURL} price={item.price} description={item.description} />
+            return <Item id ={item.id} name={item.name} imgURL={item.img1URL} price={item.price} artists={item.artists} />
         })}
         </div>           
      );

@@ -1,4 +1,4 @@
-import discos from "./discos";
+import albums from "./albums";
 import ItemList from "./ItemList"
 import { useEffect, useState } from "react";
 import {useParams} from "react-router-dom"
@@ -9,11 +9,12 @@ const ItemListContainer = () => {
 
     useEffect(() => {
         const loadData = new Promise((resolve, reject) => {
-            setTimeout(()=>resolve(discos),2000)
+            setTimeout(()=>resolve(albums),2000)
         })
         loadData.then((items) => {
             if(name){
-                setItems(items.filter((album) => album.category == name))
+                setItems(items.filter((album) => 
+                album.genres.includes(name.charAt(0).toUpperCase() + name.slice(1)) == true))
             }else{
                 setItems(items)
             }
