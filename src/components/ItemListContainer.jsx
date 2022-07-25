@@ -11,7 +11,7 @@ const ItemListContainer = () => {
 
     useEffect(() => {
         const loadData = new Promise((resolve, reject) => {
-            setTimeout(()=>resolve(albums),2000)
+            setTimeout(()=>resolve(albums),1000)
         })
         loadData.then((items) => {
             if(name){
@@ -25,7 +25,7 @@ const ItemListContainer = () => {
         })
     },[name]) 
     return ( 
-    <section className="w-full h-screen bg-zinc-200 drop-shadow-lg pt-[100px] ">
+    <section className="w-[100%] h-screen bg-zinc-200 drop-shadow-lg">
         <ItemList items = {Items} loaded={loading}/>
     </section>
      );

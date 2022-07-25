@@ -5,8 +5,8 @@ import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
     const { id } = useParams()
-    console.log("el id es"+id)
     const [Item, setItems] = useState([])
+    const [loading, setLoading] = useState(false)
 
     useEffect(() => {
         const loadData = new Promise((resolve, reject) => {
@@ -14,11 +14,12 @@ const ItemDetailContainer = () => {
         })
         loadData.then((items) => {
             setItems(items)
+            setLoading(true)
         })
     },[id]) 
     return (
     <section className="w-full h-screen bg-zinc-200 drop-shadow-lg pt-[100px] ">
-        <ItemDetail item = {Item}/>
+        <ItemDetail item = {Item} loaded={loading}/>
     </section>
      );
 }

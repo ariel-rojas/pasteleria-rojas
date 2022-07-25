@@ -1,10 +1,11 @@
+// import { Ring } from 'react-awesome-spinners'
+
 const Spinner = () => {
     return ( 
         <>
-            <div class="flex justify-center items-center">
-                <div class="spinner-border animate-spin inline-block w-[300px] h-[300px] border-4 rounded-full" role="status">
-                    <span class="visually-hidden">Loading...</span>
-                </div>
+            <div class="flex h-screen w-screen justify-center items-center">
+                {/* <Ring/> */}
+                <span class="loader-2"></span>
             </div>
         </>
      );

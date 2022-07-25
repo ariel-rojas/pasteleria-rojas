@@ -1,15 +1,14 @@
 import Item from "./Item";
-import Spinner from "./Spinner";
+import { RadarSpinner } from 'react-epic-spinners'
 
-const ItemList = ({items}, loaded=false) => {
+const ItemList = ({items, loaded=false}) => {
     return ( 
-        <div className = "w-screen flex flex-row flex-wrap justify-start items-center bg-zinc-200">
+        <div className = " mt-5 w-screen h-screen flex flex-row flex-wrap justify-start items-center bg-zinc-200">
             {!loaded ?(
                 <>
-                console.log("entrooo")
-                    <div className="bg-black h-full">
-                        <h1>HOLA</h1>
-                    </div>
+                <div className="w-full h-screen flex justify-center items-center">
+                    <RadarSpinner color="red"/>
+                </div>
                 </>
             ) : (
                 items.map((item) => {

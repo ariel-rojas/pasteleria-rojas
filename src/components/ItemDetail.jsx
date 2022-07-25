@@ -2,9 +2,7 @@ import { Link } from 'react-router-dom';
 import ItemCount from './ItemCount';
 
 // array de un elemento 
-const ItemDetail = ({item}) => {
-    console.log('el objeto es:')
-    console.log(item)
+const ItemDetail = ({item, loaded=false}) => {
     return ( 
         <>
         <div className='flex h-[500px] justify-center items-center bg-slate-50'>
@@ -21,7 +19,6 @@ const ItemDetail = ({item}) => {
                 </div>
             </div>
         </div>
-
     </>        
      );
 }
