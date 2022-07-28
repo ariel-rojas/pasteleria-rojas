@@ -3,7 +3,7 @@ import { RadarSpinner } from 'react-epic-spinners'
 
 const ItemList = ({items, loaded=false}) => {
     return ( 
-        <div className = " mt-5 w-screen h-screen flex flex-row flex-wrap justify-start items-center bg-zinc-200">
+        <div className = "w-screen h-screen flex flex-row flex-wrap justify-start items-center bg-zinc-200">
             {!loaded ?(
                 <>
                 <div className="w-full h-screen flex justify-center items-center">

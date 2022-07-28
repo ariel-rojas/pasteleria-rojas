@@ -2,6 +2,7 @@ import albums from "./albums";
 import ItemList from "./ItemList"
 import { useEffect, useState } from "react";
 import {useParams} from "react-router-dom"
+import { Link } from 'react-router-dom';
 
 const ItemListContainer = () => {
     const { name } = useParams()
@@ -25,7 +26,14 @@ const ItemListContainer = () => {
         })
     },[name]) 
     return ( 
-    <section className="w-[100%] h-screen bg-zinc-200 drop-shadow-lg">
+    <section className="w-[100%] h-screen pt-[150px] bg-zinc-200 drop-shadow-lg">
+        <div className="flex justify-center">
+        <p className="flex text-2xl text-slate-800 p-2">Filtrar por género:</p>
+        <Link className='flex text-2xl text-slate-800 p-2 font-bold' to={"/category/rock"}>Rock</Link>
+        <Link className='flex text-2xl text-slate-800 p-2 font-bold' to={"/category/pop"}>Pop</Link>
+        <Link className='flex text-2xl text-slate-800 p-2 font-bold' to={"/category/electronic"}>Electrónica</Link>
+        <Link className='flex text-2xl text-slate-800 p-2 font-bold' to={"/category/jazz"}>Jazz</Link>
+        </div>
         <ItemList items = {Items} loaded={loading}/>
     </section>
      );

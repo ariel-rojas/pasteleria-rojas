@@ -24,7 +24,7 @@ const Item = (props) => {
                         <div className="flex h-[120px] w-[180px] m-2 flex-col justify-center  text-center bg-[#ffffffb5]">
                             <h3 className='min-h-[2rem]'>{props.name}</h3>
                             <p>{props.artists}</p>
-                            <p>{props.price}</p>
+                            <p>${props.price}</p>
                         </div>
                         <Link to={`/item/${props.id}`}>
                                 <button className='min-h-[5rem] bg-red-500 border-red-800'>
