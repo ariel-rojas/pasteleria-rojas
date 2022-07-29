@@ -24,10 +24,10 @@ const NavBar = () => {
                 </div>
                 <div className='flex  flex-col items-center w-full bg-slate-800 text-zinc-200'>
                     <ul className='hidden md:flex w-full justify-center'>
-                        <li><a href="#">Inicio</a> </li>
-                        <li><a href="">Productos</a> </li>
-                        <li><a href="">Preguntas</a></li>
-                        <li><a href="">Sobre Nosotros</a></li>
+                        <li>Inicio </li>
+                        <li>Productos</li>
+                        <li>Preguntas</li>
+                        <li>Sobre Nosotros</li>
                     </ul>
                 </div>
 

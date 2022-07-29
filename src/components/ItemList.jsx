@@ -12,7 +12,7 @@ const ItemList = ({items, loaded=false}) => {
                 </>
             ) : (
                 items.map((item) => {
-                    return <Item key ={item.id} name={item.name} img1URL={item.img1URL} img2URL = {item.img2URL} price={item.price} artists={item.artists} />
+                    return <Item key ={item.id} name={item.name} img1URL={item.img1URL} img2URL = {item.img2URL} img3URL={item.img3URL} price={item.price} artists={item.artists} />
                 })
             )}
         

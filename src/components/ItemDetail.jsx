@@ -29,7 +29,7 @@ const ItemDetail = ({item, loaded=false}) => {
                             <p>Artista: {item.artists}</p>
                             <p>Precio: ${item.price}</p>
                             <p>Lanzamiento: {item.year}</p>
-                            {(amount == 0)?  (<ItemCount stock = {10} initial = {0} onAdd ={onAdd} />) : (<p> {amount} productos fueron agregados al carrito</p>)}
+                            {(amount === 0)?  (<ItemCount stock = {10} initial = {0} onAdd ={onAdd} />) : (<p> {amount} productos fueron agregados al carrito</p>)}
                             <Link to="/cart"><button>Ver carrito</button></Link>
                         </div>
                     </div>

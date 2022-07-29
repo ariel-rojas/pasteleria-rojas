@@ -1,21 +1,12 @@
-import ItemCount from './ItemCount';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 const Item = (props) => {
 
     const [Hover, setHover] = useState(false)
-    const activeHover = () =>{
-        setHover(true)
-    }
-    const desactiveHover = () =>{
-        setHover(false)
-    }
-
-
 
     return ( 
         <>
-        <div className='w-[300px] h-[300px] m-[20px] bg-white' key={props.id}>
+        <div className='w-[300px] h-[300px] m-[20px] bg-white'>
             <Link to={`/item/${props.id}`}>
                 <div className = "flex flex-col w-[300px] h-[300px]  text-center bg-center bg-no-repeat bg-contain justify-center" 
                 style={{backgroundImage: `url(${!Hover?props.img1URL:props.img2URL})`}}
@@ -26,11 +17,9 @@ const Item = (props) => {
                             <p>{props.artists}</p>
                             <p>${props.price}</p>
                         </div>
-                        <Link to={`/item/${props.id}`}>
                                 <button className='min-h-[5rem] bg-red-500 border-red-800'>
                                     Ver detalles
                                 </button>
-                        </Link>
                     </div>
 
                 </div>
