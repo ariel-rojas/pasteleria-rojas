@@ -15,7 +15,7 @@ const Item = (props) => {
 
     return ( 
         <>
-        <card className='w-[300px] h-[300px] m-[20px] bg-white'>
+        <div className='w-[300px] h-[300px] m-[20px] bg-white' key={props.id}>
             <Link to={`/item/${props.id}`}>
                 <div className = "flex flex-col w-[300px] h-[300px]  text-center bg-center bg-no-repeat bg-contain justify-center" 
                 style={{backgroundImage: `url(${!Hover?props.img1URL:props.img2URL})`}}
@@ -35,7 +35,7 @@ const Item = (props) => {
 
                 </div>
             </Link>
-        </card>
+        </div>
         </>
      );
 }
