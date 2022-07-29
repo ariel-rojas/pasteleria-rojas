@@ -15,10 +15,12 @@ const ItemCount = (props) => {
     }
     return ( 
         <>
-        <button onClick={() => registrarClick("-")}>-</button>
-        {count}
-        <button onClick={() => registrarClick("+")}>+</button>
-        <button onClick = {() => onAdd()}>Agregar al carrito</button>
+        <div className="flex justify-center m-2">
+            <button className="flex w-5 justify-center" onClick={() => registrarClick("-")}>-</button>
+            <p className="flex w-5 justify-center">{count}</p>
+            <button className="flex w-5 justify-center" onClick={() => registrarClick("+")}>+</button>       
+        </div>
+        <button onClick = {() => onAdd(count)}>Agregar al carrito</button>
         </>
 
      );

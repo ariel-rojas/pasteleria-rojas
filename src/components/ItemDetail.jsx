@@ -1,9 +1,14 @@
 import { Link } from 'react-router-dom';
 import ItemCount from './ItemCount';
+import { useState } from 'react';
 import { RadarSpinner } from 'react-epic-spinners'
 
 // array de un elemento 
 const ItemDetail = ({item, loaded=false}) => {
+    const [amount, setAmount] = useState(0)
+    const onAdd = (amount) => {
+        setAmount(amount)
+    }
     return ( 
         <>
         <div className='flex justify-center items-center bg-slate-50'>
@@ -24,12 +29,12 @@ const ItemDetail = ({item, loaded=false}) => {
                             <p>Artista: {item.artists}</p>
                             <p>Precio: ${item.price}</p>
                             <p>Lanzamiento: {item.year}</p>
-                            <ItemCount stock = {10} initial = {0} onAdd ={() => console.log("se agregó al carrito")} />
+                            {(amount == 0)?  (<ItemCount stock = {10} initial = {0} onAdd ={onAdd} />) : (<p> {amount} productos fueron agregados al carrito</p>)}
+                            <Link to="/cart"><button>Ver carrito</button></Link>
                         </div>
                     </div>
                 </>
             )}
-
         </div>
     </>        
      );

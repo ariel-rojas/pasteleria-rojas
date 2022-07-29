@@ -33,6 +33,7 @@ const ItemListContainer = () => {
         <Link className='flex text-2xl text-slate-800 p-2 font-bold' to={"/category/pop"}>Pop</Link>
         <Link className='flex text-2xl text-slate-800 p-2 font-bold' to={"/category/electronic"}>Electrónica</Link>
         <Link className='flex text-2xl text-slate-800 p-2 font-bold' to={"/category/jazz"}>Jazz</Link>
+        <Link className='flex text-2xl text-slate-800 p-2 font-bold' to={"/"}>Todos</Link>
         </div>
         <ItemList items = {Items} loaded={loading}/>
     </section>
